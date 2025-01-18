@@ -1,4 +1,4 @@
-const FAVICON_API = import.meta.env.VITE_WITH_SERVER ? import.meta.env.VITE_FAVICON_API : 'https://api.iowen.cn/favicon'
+const FAVICON_API = import.meta.env.VITE_WITH_SERVER ? import.meta.env.VITE_FAVICON_API : 'https://ico.kucat.cn/get.php'
 
 const siteToUrl: Map<string, string> = new Map()
 const sites: string[] = [
@@ -33,5 +33,5 @@ export function getFaviconUrl(url: string) {
   if (optUrl)
     return optUrl
 
-  return `${FAVICON_API}/${paramsUrl}.png`
+  return `${FAVICON_API}?url=${paramsUrl}`
 }

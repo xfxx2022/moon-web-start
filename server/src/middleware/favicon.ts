@@ -16,7 +16,7 @@ export function faviconInterceptor() {
         const domain = id.replace('.png', '')
         try {
           const arrayBuffer = await ky.get(
-            `https://0x3.com/icon?host=${domain}`,
+            `https://0x3.com/icon?`,
           ).arrayBuffer()
           fs.writeFileSync(
             path.join(import.meta.dirname, `../../public/favicon/${id}`),
